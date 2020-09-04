@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
-    bucket = "${format("hackathon-fiap-dvp2-335224-${terraform.workspace}")}"
-    key    = "state/hackaton-cicd-deploy"
+    bucket = "hackathon-fiap-dvp2-335224"
+    key    = "${format("state/hackaton-cicd-deploy-${terraform.workspace}")}"
     region = "us-east-1"
   }
 }
